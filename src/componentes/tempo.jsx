@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
+import Home from "./Home"
 
 function Tempo() {
     const navigate = useNavigate();
@@ -43,6 +44,7 @@ function Tempo() {
             <><div style={{ textAlign: 'center', marginTop: '50px' }}>
                 <h1>🎉 Conteúdo Desbloqueado!</h1>
                 <p>Seja bem-vindo à próxima etapa.</p>
+                navigate ("/Home")
             </div></>
         );
     }
