@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
 
- function Tempo() {
-const navigate = useNavigate();
+function Tempo() {
+    const navigate = useNavigate();
     const targetDate = new Date('2026-10-01T00:00:00');
 
     const [estArrive, setEstArrive] = useState(false);
@@ -18,7 +18,7 @@ const navigate = useNavigate();
             const maintenant = new Date();
             const difference = targetDate.getTime() - maintenant.getTime();
 
-        
+
             if (difference <= 0) {
                 setEstArrive(true);
             } else {
@@ -40,20 +40,23 @@ const navigate = useNavigate();
 
     if (estArrive) {
         return (
-<></>
+            <><div style={{ textAlign: 'center', marginTop: '50px' }}>
+                <h1>🎉 Conteúdo Desbloqueado!</h1>
+                <p>Seja bem-vindo à próxima etapa.</p>
+            </div></>
         );
     }
     return (
-    <div style={{ textAlign: 'center', marginTop: '50px' }}>
-      <h1>Compte à rebours avant le 1er Octobre</h1>
-      <div style={{ fontSize: '2rem', margin: '20px 0' }}>
-        <span>{tempsRestant.jours}j </span>
-        <span>{tempsRestant.heures}h </span>
-        <span>{tempsRestant.minutes}m </span>
-        <span>{tempsRestant.secondes}s</span>
-      </div>
-      <p>Veuillez patienter pour débloquer la suite...</p>
-    </div>
-  );
+        <div style={{ textAlign: 'center', marginTop: '50px' }}>
+            <h1>Compte à rebours avant le 1er Octobre</h1>
+            <div style={{ fontSize: '2rem', margin: '20px 0' }}>
+                <span>{tempsRestant.jours}j </span>
+                <span>{tempsRestant.heures}h </span>
+                <span>{tempsRestant.minutes}m </span>
+                <span>{tempsRestant.secondes}s</span>
+            </div>
+            <p>Veuillez patienter pour débloquer la suite...</p>
+        </div>
+    );
 }
 export default Tempo;
