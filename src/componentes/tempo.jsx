@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
-import Home from "./Home"
 
 function Tempo() {
     const navigate = useNavigate();
-    const targetDate = new Date('2026-10-01T00:00:00');
+    const targetDate = new Date('2026-09-18T00:00:00');
 
     const [estArrive, setEstArrive] = useState(false);
     const [tempsRestant, setTempsRestant] = useState({
@@ -18,7 +17,6 @@ function Tempo() {
         const mefiemps = () => {
             const maintenant = new Date();
             const difference = targetDate.getTime() - maintenant.getTime();
-
 
             if (difference <= 0) {
                 setEstArrive(true);
@@ -41,13 +39,16 @@ function Tempo() {
 
     if (estArrive) {
         return (
-            <><div style={{ textAlign: 'center', marginTop: '50px' }}>
+            <div style={{ textAlign: 'center', marginTop: '50px' }}>
                 <h1>🎉 Conteúdo Desbloqueado!</h1>
                 <p>Seja bem-vindo à próxima etapa.</p>
-                navigate ("/Home")
-            </div></>
+                <button onClick={() => navigate("/Home")} style={{ marginTop: '20px', backgroundColor: 'blue', color: 'white', border: 'none', padding: '10px 20px', cursor: 'pointer' }}>
+                    Ir para home
+                </button>
+            </div>
         );
     }
+
     return (
         <div style={{ textAlign: 'center', marginTop: '50px' }}>
             <h1>Compte à rebours avant le 1er Octobre</h1>
@@ -58,7 +59,9 @@ function Tempo() {
                 <span>{tempsRestant.secondes}s</span>
             </div>
             <p>Veuillez patienter pour débloquer la suite...</p>
+
         </div>
     );
 }
+
 export default Tempo;

@@ -1,11 +1,7 @@
+import React from "react";
 
-
-
-function Conteudo(){
-
-
-
-    return(
+function Conteudo() {
+    return (
         <main className="container">
             <h1>Conteudo principal</h1>
             <section className="mensagens">
@@ -26,8 +22,9 @@ function Conteudo(){
                 <div className="foto1"></div>
                 <div className="foto2"></div>
                 <div className="foto3"></div>
-
             </section>
         </main>
     );
 }
+
+export default Conteudo;
