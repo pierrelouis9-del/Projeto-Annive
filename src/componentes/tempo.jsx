@@ -4,7 +4,7 @@ import './tempo.css';
 
 function Tempo() {
     const navigate = useNavigate();
-    const targetDate = new Date('2026-09-18T00:00:00');
+    const targetDate = new Date('2026-09-20T13:11:59');
 
     const [estArrive, setEstArrive] = useState(false);
     const [tempsRestant, setTempsRestant] = useState({
@@ -40,28 +40,33 @@ function Tempo() {
 
     if (estArrive) {
         return (
-            <div style={{ textAlign: 'center', marginTop: '50px' }}>
-                <h1>🎉 Conteúdo Desbloqueado!</h1>
-                <p>Seja bem-vindo à próxima etapa.</p>
-                <button onClick={() => navigate("/Home")} style={{ marginTop: '20px', backgroundColor: 'blue', color: 'white', border: 'none', padding: '10px 20px', cursor: 'pointer' }}>
-                    Ir para home
-                </button>
-            </div>
+            <main className="container1">
+                <div className="card">
+                    <span className="emoji-title">🎉🎉🎉</span>
+                    <h1>FELIZ ANIVERSÁRIO!</h1>
+                    <span className="emoji-title">🎉🎉🎉</span>
+                    <p>Seja bem-vindo à próxima etapa.</p>
+                    <button onClick={() => navigate("/Home")}>
+                        Ir para home
+                    </button>
+                </div>
+            </main>
         );
     }
 
     return (
-        <div style={{ textAlign: 'center', marginTop: '50px' }}>
-            <h1>Compte à rebours avant le 1er Octobre</h1>
-            <div style={{ fontSize: '2rem', margin: '20px 0' }}>
-                <span>{tempsRestant.jours}j </span>
-                <span>{tempsRestant.heures}h </span>
-                <span>{tempsRestant.minutes}m </span>
-                <span>{tempsRestant.secondes}s</span>
+        <main className="container2">
+            <div className="card">
+                <h1>Contagem regressiva para 1 Outubro</h1>
+                <div className="timer-box">
+                    <span>{tempsRestant.jours}j </span>
+                    <span>{tempsRestant.heures}h </span>
+                    <span>{tempsRestant.minutes}m </span>
+                    <span>{tempsRestant.secondes}s</span>
+                </div>
+                <p>Por favor, aguarde para desbloquear a próxima etapa...</p>
             </div>
-            <p>Veuillez patienter pour débloquer la suite...</p>
-
-        </div>
+        </main>
     );
 }
 

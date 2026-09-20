@@ -1,91 +1,622 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-  margin: 0;
-  padding: 0;
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    font-family: "Poppins", Arial, sans-serif;
+    background: #080611;
+    color: white;
+    overflow-x: hidden;
 }
 
-div[style*="textAlign: 'center'"],
-div[style*="text-align: center"] {
-  background-color: #ffffff;
-  padding: 40px;
-  border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  text-align: center !important;
-  max-width: 480px;
-  width: 90%;
-  margin: 0 auto !important;
-  box-sizing: border-box;
+.container1,
+.container2 {
+    min-height: 100vh;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    overflow: hidden;
+
+    padding: 30px;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(137, 72, 180, 0.22),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 80% 70%,
+            rgba(255, 72, 151, 0.16),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #080611 0%,
+            #120b20 45%,
+            #080611 100%
+        );
 }
 
-h1 {
-  color: #2c3e50;
-  font-size: 1.8rem;
-  margin-top: 0;
-  margin-bottom: 20px;
+.container1::before,
+.container2::before {
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    border-radius: 50%;
+
+    background: rgba(181, 81, 255, 0.08);
+
+    filter: blur(100px);
+
+    top: -250px;
+    left: -150px;
+
+    animation: luz 8s ease-in-out infinite alternate;
 }
 
-div[style*="fontSize: '2rem'"],
-div[style*="font-size: 2rem"] {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  margin: 25px 0 !important;
-  font-size: 1.5rem !important;
+.container1::after,
+.container2::after {
+    content: "";
+
+    position: absolute;
+
+    width: 450px;
+    height: 450px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 74, 158, 0.07);
+
+    filter: blur(100px);
+
+    right: -200px;
+    bottom: -200px;
+
+    animation: luz2 10s ease-in-out infinite alternate;
 }
 
-div[style*="fontSize: '2rem'"] span,
-div[style*="font-size: 2rem"] span {
-  background-color: #f8f9fa;
-  border: 1px solid #e9ecef;
-  border-radius: 10px;
-  padding: 10px 14px;
-  font-weight: bold;
-  color: #e74c3c;
-  min-width: 50px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+.container2 {
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            rgba(99, 63, 164, 0.2),
+            transparent 35%
+        ),
+        linear-gradient(
+            180deg,
+            #06050d 0%,
+            #10091c 50%,
+            #080611 100%
+        );
 }
 
-p {
-  color: #666666;
-  font-size: 1rem;
-  margin-bottom: 20px;
-  line-height: 1.5;
+.container2::before {
+    width: 3px;
+    height: 3px;
+
+    background: white;
+
+    border-radius: 50%;
+
+    box-shadow:
+        70px 80px white,
+        160px 160px rgba(255,255,255,.8),
+        260px 60px white,
+        350px 190px rgba(255,255,255,.7),
+        470px 100px white,
+        600px 220px rgba(255,255,255,.8),
+        720px 80px white,
+        850px 170px rgba(255,255,255,.7),
+        970px 50px white,
+        1080px 240px rgba(255,255,255,.8),
+        1200px 100px white,
+        1280px 300px rgba(255,255,255,.7),
+        110px 500px rgba(255,255,255,.8),
+        300px 650px white,
+        520px 550px rgba(255,255,255,.7),
+        760px 680px white,
+        980px 540px rgba(255,255,255,.8),
+        1150px 650px white;
+
+    top: 0;
+    left: 0;
+
+    width: 2px;
+    height: 2px;
+
+    filter: drop-shadow(0 0 5px white);
+
+    animation: estrelas 4s ease-in-out infinite alternate;
 }
 
-button {
-  margin-top: 15px !important;
-  background-color: #e74c3c !important;
-  color: #ffffff !important;
-  border: none !important;
-  padding: 12px 30px !important;
-  border-radius: 25px !important;
-  font-size: 1rem !important;
-  font-weight: bold !important;
-  cursor: pointer !important;
-  transition: all 0.3s ease !important;
-  box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3) !important;
+.card {
+    position: relative;
+
+    z-index: 5;
+
+    width: min(850px, 95%);
+
+    padding: 60px 55px;
+
+    text-align: center;
+
+    border-radius: 35px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.09),
+            rgba(255,255,255,.025)
+        );
+
+    border: 1px solid rgba(255,255,255,.15);
+
+    backdrop-filter: blur(20px);
+
+    box-shadow:
+        0 30px 100px rgba(0,0,0,.6),
+        inset 0 1px 1px rgba(255,255,255,.08);
+
+    animation: entrada 1.3s cubic-bezier(.16,1,.3,1);
 }
 
-button:hover {
-  background-color: #c0392b !important;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(231, 76, 60, 0.4) !important;
+.container2 .card {
+    animation:
+        entrada 1.3s cubic-bezier(.16,1,.3,1),
+        flutuar 6s ease-in-out 1.3s infinite;
 }
 
-button:active {
-  transform: translateY(0);
+.container1 .card {
+    border-color: rgba(255,111,176,.25);
+
+    box-shadow:
+        0 30px 100px rgba(0,0,0,.6),
+        0 0 80px rgba(255,72,151,.08),
+        inset 0 1px 1px rgba(255,255,255,.1);
 }
 
-@media (max-width: 480px) {
-  div[style*="fontSize: '2rem'"] span,
-  div[style*="font-size: 2rem"] span {
-    padding: 8px 10px;
-    font-size: 1.2rem !important;
-    min-width: 40px;
-  }
+.emoji-title {
+    display: block;
+
+    font-size: 42px;
+
+    letter-spacing: 12px;
+
+    margin-bottom: 10px;
+
+    filter:
+        drop-shadow(0 0 10px rgba(255,100,170,.5));
+
+    animation:
+        aparecer 1s ease .3s both,
+        pulsar 2.5s ease-in-out 1.3s infinite;
+}
+
+.card h1 {
+    position: relative;
+
+    font-size: clamp(35px, 6vw, 68px);
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    margin: 15px 0 25px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ffffff,
+            #ffc4df,
+            #ffffff
+        );
+
+    background-size: 200% auto;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+
+    animation:
+        aparecer 1s ease .5s both,
+        brilhoTexto 4s linear infinite;
+}
+
+.container2 .card h1 {
+    font-size: clamp(30px, 5vw, 55px);
+
+    line-height: 1.15;
+
+    color: white;
+
+    background: none;
+
+    -webkit-background-clip: initial;
+    background-clip: initial;
+
+    animation: aparecer 1s ease .4s both;
+}
+
+.card h1::after {
+    content: "";
+
+    display: block;
+
+    width: 90px;
+    height: 2px;
+
+    margin: 25px auto 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #ff76ad,
+            transparent
+        );
+
+    box-shadow: 0 0 15px rgba(255,100,170,.6);
+}
+
+.card p {
+    font-size: 19px;
+
+    line-height: 1.8;
+
+    color: #c9c3d4;
+
+    margin-top: 25px;
+
+    animation: aparecer 1s ease .8s both;
+}
+
+.timer-box {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+
+    margin: 45px auto 30px;
+
+    max-width: 700px;
+
+    animation: aparecer 1s ease .6s both;
+}
+
+.timer-box span {
+    position: relative;
+
+    min-width: 0;
+
+    padding: 25px 15px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.1),
+            rgba(255,255,255,.025)
+        );
+
+    border: 1px solid rgba(255,255,255,.12);
+
+    color: white;
+
+    font-size: clamp(25px, 4vw, 38px);
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    box-shadow:
+        0 15px 30px rgba(0,0,0,.25),
+        inset 0 1px rgba(255,255,255,.06);
+
+    transition:
+        transform .3s ease,
+        border .3s ease,
+        box-shadow .3s ease;
+}
+
+.timer-box span::after {
+    content: "";
+
+    position: absolute;
+
+    left: 20%;
+    right: 20%;
+
+    bottom: 8px;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,110,170,.5),
+            transparent
+        );
+}
+
+.timer-box span:hover {
+    transform: translateY(-8px);
+
+    border-color: rgba(255,110,175,.35);
+
+    box-shadow:
+        0 20px 40px rgba(0,0,0,.35),
+        0 0 30px rgba(255,90,160,.1);
+}
+
+.container1 button {
+    position: relative;
+
+    margin-top: 35px;
+
+    padding: 16px 40px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff4f9a,
+            #bd4dff
+        );
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    letter-spacing: .5px;
+
+    cursor: pointer;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 10px 30px rgba(255,75,150,.25);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+.container1 button::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -100%;
+
+    width: 100%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.35),
+            transparent
+        );
+
+    transition: .6s;
+}
+
+.container1 button:hover::before {
+    left: 100%;
+}
+
+.container1 button:hover {
+    transform: translateY(-4px) scale(1.03);
+
+    box-shadow:
+        0 15px 40px rgba(255,75,150,.4);
+}
+
+.container1 button:active {
+    transform: scale(.97);
+}
+
+@keyframes entrada {
+    from {
+        opacity: 0;
+        transform:
+            translateY(50px)
+            scale(.94);
+        filter: blur(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            translateY(0)
+            scale(1);
+        filter: blur(0);
+    }
+}
+
+@keyframes flutuar {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulsar {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.08);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes brilhoTexto {
+    0% {
+        background-position: 0% center;
+    }
+
+    100% {
+        background-position: 200% center;
+    }
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes estrelas {
+    from {
+        opacity: .3;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes luz {
+    from {
+        transform: translate(0, 0) scale(1);
+    }
+
+    to {
+        transform: translate(150px, 100px) scale(1.2);
+    }
+}
+
+@keyframes luz2 {
+    from {
+        transform: translate(0, 0) scale(1);
+    }
+
+    to {
+        transform: translate(-100px, -80px) scale(1.15);
+    }
+}
+
+@media (max-width: 700px) {
+
+    .container1,
+    .container2 {
+        padding: 20px;
+    }
+
+    .card {
+        width: 100%;
+
+        padding: 45px 20px;
+
+        border-radius: 25px;
+    }
+
+    .emoji-title {
+        font-size: 30px;
+
+        letter-spacing: 6px;
+    }
+
+    .card h1 {
+        font-size: 36px;
+
+        letter-spacing: 1px;
+    }
+
+    .container2 .card h1 {
+        font-size: 30px;
+    }
+
+    .card p {
+        font-size: 16px;
+    }
+
+    .timer-box {
+        gap: 8px;
+
+        margin-top: 35px;
+    }
+
+    .timer-box span {
+        padding: 20px 5px;
+
+        border-radius: 14px;
+
+        font-size: 20px;
+    }
+
+    .timer-box span::after {
+        left: 15%;
+        right: 15%;
+    }
+
+    .container1 button {
+        padding: 14px 30px;
+    }
+}
+
+@media (max-width: 430px) {
+
+    .timer-box {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 12px;
+    }
+
+    .timer-box span {
+        padding: 22px 10px;
+
+        font-size: 23px;
+    }
+
+    .card h1 {
+        font-size: 31px;
+    }
+
+    .container2 .card h1 {
+        font-size: 27px;
+    }
 }
