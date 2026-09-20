@@ -4,7 +4,7 @@ import './tempo.css';
 
 function Tempo() {
     const navigate = useNavigate();
-    const targetDate = new Date('2026-09-20T13:11:59');
+    const targetDate = new Date('2026-10-01T00:00:00');
 
     const [estArrive, setEstArrive] = useState(false);
     const [tempsRestant, setTempsRestant] = useState({

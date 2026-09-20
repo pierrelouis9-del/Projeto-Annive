@@ -11,7 +11,7 @@ function Acceuil() {
         <main className="acceuil">
             <div className="text">
                 <h2>Oi, Amorcita</h2>
-                <p> <i> Preparei um presente para você!</i></p>
+                <p> <i> Preparei este site para você como  um presente para você!</i></p>
                 <p><i> Espero que você goste!</i></p>
                 <strong>||</strong>
                 <strong>||</strong>
