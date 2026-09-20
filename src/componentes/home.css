@@ -1,0 +1,62 @@
+.salu {
+  text-align: center;
+  margin-top: 40px;
+  padding: 0 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.salu h2 {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.salu p {
+  font-size: 1.1rem;
+  color: #666666;
+  max-width: 500px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+.conteudo {
+  text-align: center;
+  margin-top: 50px;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  max-width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.conteudo h3 {
+  font-size: 1.3rem;
+  color: #333333;
+  margin-bottom: 25px;
+}
+
+.conteudo button {
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #e74c3c;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);
+}
+
+.conteudo button:hover {
+  background-color: #c0392b;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(231, 76, 60, 0.4);
+}
+
+.conteudo button:active {
+  transform: translateY(0);
+}

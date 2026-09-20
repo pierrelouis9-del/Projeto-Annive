@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
+import './tempo.css';
 
 function Tempo() {
     const navigate = useNavigate();

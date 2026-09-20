@@ -1,0 +1,91 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+div[style*="textAlign: 'center'"],
+div[style*="text-align: center"] {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  text-align: center !important;
+  max-width: 480px;
+  width: 90%;
+  margin: 0 auto !important;
+  box-sizing: border-box;
+}
+
+h1 {
+  color: #2c3e50;
+  font-size: 1.8rem;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+div[style*="fontSize: '2rem'"],
+div[style*="font-size: 2rem"] {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 25px 0 !important;
+  font-size: 1.5rem !important;
+}
+
+div[style*="fontSize: '2rem'"] span,
+div[style*="font-size: 2rem"] span {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-weight: bold;
+  color: #e74c3c;
+  min-width: 50px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+p {
+  color: #666666;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+button {
+  margin-top: 15px !important;
+  background-color: #e74c3c !important;
+  color: #ffffff !important;
+  border: none !important;
+  padding: 12px 30px !important;
+  border-radius: 25px !important;
+  font-size: 1rem !important;
+  font-weight: bold !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3) !important;
+}
+
+button:hover {
+  background-color: #c0392b !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(231, 76, 60, 0.4) !important;
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 480px) {
+  div[style*="fontSize: '2rem'"] span,
+  div[style*="font-size: 2rem"] span {
+    padding: 8px 10px;
+    font-size: 1.2rem !important;
+    min-width: 40px;
+  }
+}
