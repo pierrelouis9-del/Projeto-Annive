@@ -1,7 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Tempo from "./componentes/tempo";
-import Conteudo from "./componentes/Conteudo";
+import Conteudo from "./componentes/conteudo";
 import Home from "./componentes/Home";
 import Acceuil from "./componentes/Acceuil";
 
