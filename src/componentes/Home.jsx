@@ -9,7 +9,7 @@ function Home() {
     return (
         <main>
             <div className="salu">
-                <h2>Bem-vinda ao seu presente ❤️</h2>
+                <h2>Bem-vinda ao seu presentes ❤️</h2>
 
                 <p>
                     Hoje, 1º de outubro, é um dia especial para você...
