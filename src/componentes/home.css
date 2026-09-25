@@ -60,3 +60,43 @@
 .conteudo button:active {
   transform: translateY(0);
 }
+
+.salu p {
+    max-width: 650px;
+    margin: 18px auto;
+    color: #d8cede;
+    font-size: 17px;
+    line-height: 1.8;
+    letter-spacing: 0.3px;
+    text-align: center;
+    opacity: 0;
+    animation: aparecerTexto 1s ease forwards;
+}
+
+.salu p:nth-of-type(1) {
+    animation-delay: 0.4s;
+}
+
+.salu p:nth-of-type(2) {
+    animation-delay: 0.8s;
+}
+
+.salu p:nth-of-type(3) {
+    animation-delay: 1.2s;
+}
+
+.salu p:nth-of-type(4) {
+    animation-delay: 1.6s;
+}
+
+@keyframes aparecerTexto {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

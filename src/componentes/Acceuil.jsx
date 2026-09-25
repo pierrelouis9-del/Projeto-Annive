@@ -10,8 +10,8 @@ function Acceuil() {
     return(
         <main className="acceuil">
             <div className="text">
-                <h2>Oi, Amorcita</h2>
-                <p> <i> Preparei este site para você como  um presente para você!</i></p>
+                <h2>Bom-dia, mi corazón</h2>
+                <p> <i> Preparei este site para te dizer algumas coisas. Leia com atenção mi corazón. </i></p>
                 <p><i> Espero que você goste!</i></p>
                 <strong>||</strong>
                 <strong>||</strong>

@@ -44,8 +44,12 @@ function Tempo() {
                 <div className="card">
                     <span className="emoji-title">🎉🎉🎉</span>
                     <h1>FELIZ ANIVERSÁRIO!</h1>
-                    <span className="emoji-title">🎉🎉🎉</span>
-                    <p>Seja bem-vindo à próxima etapa.</p>
+                    <br />
+                    <h3>Que tu 17º año sea el más maravilloso para ti, mi amor.</h3>
+                    <br />
+                    <h3> Que te traiga alegría, crecimiento, prosperidad, más amor bajo la protección de Dios</h3>
+                    
+                    <p>Clica no botão em baixo para para descobrer mais</p>
                     <button onClick={() => navigate("/Home")}>
                         Ir para home
                     </button>
@@ -64,8 +68,11 @@ function Tempo() {
                     <span>{tempsRestant.minutes}m </span>
                     <span>{tempsRestant.secondes}s</span>
                 </div>
-                <p>Por favor, aguarde para desbloquear a próxima etapa...</p>
+                <p>Por favor, aguarde um pouco mi corazón...</p>
+                <br/>
+                <div className="corazon">❤️</div>
             </div>
+            
         </main>
     );
 }
