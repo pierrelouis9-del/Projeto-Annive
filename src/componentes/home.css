@@ -172,3 +172,46 @@
         padding: 13px;
     }
 }
+@media (min-width: 360px) and (max-width: 400px) {
+    main {
+        min-height: 100dvh;
+        height: 100dvh;
+        padding: 15px 12px;
+        overflow: hidden;
+    }
+
+    .salu {
+        width: 100%;
+        padding: 25px 16px;
+        margin: 0 auto;
+    }
+
+    .salu h2 {
+        font-size: 23px;
+        line-height: 1.3;
+        margin-bottom: 16px;
+    }
+
+    .salu p {
+        font-size: 13px;
+        line-height: 1.55;
+        margin: 11px auto;
+    }
+
+    .conteudo {
+        width: 100%;
+        padding: 18px 14px;
+        margin-top: 15px;
+    }
+
+    .conteudo h3 {
+        font-size: 14px;
+        line-height: 1.4;
+        margin-bottom: 15px;
+    }
+
+    .conteudo button {
+        padding: 11px 22px;
+        font-size: 13px;
+    }
+}
