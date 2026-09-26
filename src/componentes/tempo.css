@@ -692,3 +692,93 @@ body {
         transform: scale(1);
     }
 }
+
+@media (max-width: 700px) {
+
+    .container1,
+    .container2 {
+        padding: 20px;
+    }
+
+    .card {
+        width: 100%;
+        padding: 40px 20px;
+        border-radius: 25px;
+    }
+
+    .emoji-title {
+        font-size: 30px;
+        letter-spacing: 5px;
+    }
+
+    .card h1 {
+        font-size: 35px;
+        line-height: 1.2;
+    }
+
+    .container2 .card h1 {
+        font-size: 28px;
+    }
+
+    .card h3 {
+        font-size: 17px;
+        line-height: 1.6;
+    }
+
+    .card p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .timer-box {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin-top: 30px;
+    }
+
+    .timer-box span {
+        padding: 18px 8px;
+        font-size: 22px;
+    }
+
+    .corazon {
+        font-size: 60px;
+    }
+
+    .container1 button {
+        padding: 14px 28px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 430px) {
+
+    .card {
+        padding: 35px 15px;
+    }
+
+    .card h1 {
+        font-size: 28px;
+    }
+
+    .container2 .card h1 {
+        font-size: 25px;
+    }
+
+    .card h3 {
+        font-size: 16px;
+    }
+
+    .card p {
+        font-size: 15px;
+    }
+
+    .timer-box span {
+        font-size: 20px;
+        padding: 16px 5px;
+    }
+
+    .corazon {
+        font-size: 55px;
+    }
+}
