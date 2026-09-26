@@ -6,10 +6,10 @@ function Conteudo() {
         <main className="container">
             <h1>Conteudo principal</h1>
             <section className="mensagens">
-                <div className="txt1">
-                    <div className="animation1"></div>
+                <div className="txt3">
+                    <div className="animation3"></div>
                     <div className="conteudo">
-                        <p>Texto da mensagem 1</p>
+                        <p>Texto da mensagem 3</p>
                     </div>
                 </div>
                 <div className="txt2">
@@ -18,10 +18,10 @@ function Conteudo() {
                         <p>Texto da mensagem 2</p>
                     </div>
                 </div>
-                <div className="txt3">
-                    <div className="animation3"></div>
+                <div className="txt1">
+                    <div className="animation1"></div>
                     <div className="conteudo">
-                        <p>Texto da mensagem 3</p>
+                        <p>Texto da mensagem 1</p>
                     </div>
                 </div>
             </section>
