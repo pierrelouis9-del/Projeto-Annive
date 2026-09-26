@@ -117,11 +117,9 @@ body {
 }
 
 .animation3::before {
-    content: "🌙";
-
-    font-size: 70px;
-
-    animation: lua 4s ease-in-out infinite;
+    content: "☀️";
+    font-size: 75px;
+    animation: sol 3s ease-in-out infinite;
 }
 
 .animation1::after,
@@ -326,17 +324,20 @@ body {
     }
 }
 
-@keyframes lua {
+@keyframes sol {
     0% {
-        transform: translateY(0) rotate(-10deg);
+        transform: scale(1) rotate(0deg);
+        filter: drop-shadow(0 0 5px rgba(255, 200, 50, 0.4));
     }
 
     50% {
-        transform: translateY(-12px) rotate(10deg);
+        transform: scale(1.18) rotate(15deg);
+        filter: drop-shadow(0 0 25px rgba(255, 200, 50, 0.9));
     }
 
     100% {
-        transform: translateY(0) rotate(-10deg);
+        transform: scale(1) rotate(30deg);
+        filter: drop-shadow(0 0 5px rgba(255, 200, 50, 0.4));
     }
 }
 
