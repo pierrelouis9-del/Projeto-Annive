@@ -694,91 +694,98 @@ body {
 }
 
 @media (max-width: 700px) {
-
-    .container1,
-    .container2 {
-        padding: 20px;
+    .container1 {
+        min-height: 100dvh;
+        height: 100dvh;
+        padding: 10px;
+        overflow: hidden;
     }
 
-    .card {
+    .container1 .card {
         width: 100%;
-        padding: 40px 20px;
-        border-radius: 25px;
+        max-height: 100%;
+        padding: 25px 18px;
+        border-radius: 22px;
+        overflow: hidden;
     }
 
     .emoji-title {
-        font-size: 30px;
-        letter-spacing: 5px;
-    }
-
-    .card h1 {
-        font-size: 35px;
-        line-height: 1.2;
-    }
-
-    .container2 .card h1 {
         font-size: 28px;
+        letter-spacing: 4px;
     }
 
-    .card h3 {
-        font-size: 17px;
-        line-height: 1.6;
+    .container1 .card h1 {
+        font-size: 30px;
+        line-height: 1.15;
+        margin-top: 10px;
     }
 
-    .card p {
+    .container1 .card h1::after {
+        margin: 12px auto;
+    }
+
+    .container1 .card h3 {
         font-size: 16px;
-        line-height: 1.6;
+        line-height: 1.45;
+        margin: 12px auto;
     }
 
-    .timer-box {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-        margin-top: 30px;
+    .container1 .card h3::before {
+        font-size: 17px;
+        margin-bottom: 4px;
     }
 
-    .timer-box span {
-        padding: 18px 8px;
-        font-size: 22px;
-    }
-
-    .corazon {
-        font-size: 60px;
+    .container1 .card p {
+        font-size: 14px;
+        line-height: 1.4;
+        margin-top: 12px;
     }
 
     .container1 button {
-        padding: 14px 28px;
-        font-size: 15px;
+        padding: 12px 25px;
+        font-size: 14px;
+        margin-top: 8px;
     }
 }
 
 @media (max-width: 430px) {
-
-    .card {
-        padding: 35px 15px;
+    .container1 {
+        padding: 6px;
     }
 
-    .card h1 {
-        font-size: 28px;
+    .container1 .card {
+        padding: 18px 14px;
+        border-radius: 20px;
     }
 
-    .container2 .card h1 {
-        font-size: 25px;
+    .emoji-title {
+        font-size: 24px;
+        letter-spacing: 3px;
     }
 
-    .card h3 {
-        font-size: 16px;
+    .container1 .card h1 {
+        font-size: 26px;
+        margin-top: 5px;
     }
 
-    .card p {
+    .container1 .card h3 {
+        font-size: 14px;
+        line-height: 1.35;
+        margin: 9px auto;
+    }
+
+    .container1 .card h3::before {
         font-size: 15px;
+        margin-bottom: 2px;
     }
 
-    .timer-box span {
-        font-size: 20px;
-        padding: 16px 5px;
+    .container1 .card p {
+        font-size: 13px;
+        line-height: 1.3;
     }
 
-    .corazon {
-        font-size: 55px;
+    .container1 button {
+        padding: 10px 22px;
+        font-size: 13px;
     }
 }
