@@ -4,7 +4,7 @@ import './tempo.css';
 
 function Tempo() {
     const navigate = useNavigate();
-    const targetDate = new Date('2026-10-01T00:00:00');
+    const targetDate = new Date('2027-01-01T00:00:00');
 
     const [estArrive, setEstArrive] = useState(false);
     const [tempsRestant, setTempsRestant] = useState({
@@ -63,7 +63,7 @@ function Tempo() {
             <div className="card">
                 <h1>Contagem regressiva para 1 Outubro</h1>
                 <div className="timer-box">
-                    <span>{tempsRestant.jours}j </span>
+                    <span>{tempsRestant.jours}d </span>
                     <span>{tempsRestant.heures}h </span>
                     <span>{tempsRestant.minutes}m </span>
                     <span>{tempsRestant.secondes}s</span>
