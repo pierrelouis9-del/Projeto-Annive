@@ -13,34 +13,25 @@ body {
 .container {
     min-height: 100vh;
     padding: 70px 8%;
-
     background:
         radial-gradient(circle at top, rgba(105, 54, 110, 0.25), transparent 45%),
         #0b0912;
 }
 
-.container>h1 {
+.container > h1 {
     text-align: center;
-
     font-size: 48px;
-
     margin-bottom: 70px;
-
     font-weight: 500;
-
     letter-spacing: 2px;
-
     animation: aparecer 1.2s ease;
 }
 
 .mensagens {
     max-width: 1100px;
-
     margin: auto;
-
     display: flex;
     flex-direction: column;
-
     gap: 35px;
 }
 
@@ -48,28 +39,17 @@ body {
 .txt2,
 .txt3 {
     color: #0b0912;
-
     min-height: 230px;
-
     display: flex;
     align-items: center;
-
     gap: 35px;
-
     padding: 35px;
-
     border-radius: 25px;
-
     background: rgba(255, 255, 255, 0.045);
-
     border: 1px solid rgba(255, 255, 255, 0.1);
-
     backdrop-filter: blur(10px);
-
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
-
     overflow: hidden;
-
     transition: 0.5s;
 }
 
@@ -77,9 +57,7 @@ body {
 .txt2:hover,
 .txt3:hover {
     transform: translateY(-7px);
-
     border-color: rgba(255, 120, 180, 0.35);
-
     box-shadow:
         0 20px 50px rgba(0, 0, 0, 0.4),
         0 0 30px rgba(255, 100, 170, 0.08);
@@ -90,11 +68,8 @@ body {
 .animation3 {
     width: 170px;
     height: 170px;
-
     flex-shrink: 0;
-
     position: relative;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -102,17 +77,13 @@ body {
 
 .animation1::before {
     content: "❤️";
-
     font-size: 75px;
-
     animation: coracao 1.5s ease-in-out infinite;
 }
 
 .animation2::before {
     content: "✨";
-
     font-size: 70px;
-
     animation: estrela 3s ease-in-out infinite;
 }
 
@@ -126,16 +97,11 @@ body {
 .animation2::after,
 .animation3::after {
     content: "";
-
     position: absolute;
-
     width: 130px;
     height: 130px;
-
     border-radius: 50%;
-
     border: 1px solid rgba(255, 120, 180, 0.2);
-
     animation: circulo 5s linear infinite;
 }
 
@@ -143,123 +109,97 @@ body {
 .txt2 .conteudo,
 .txt3 .conteudo {
     flex: 1;
-
     min-height: 120px;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     padding: 20px;
-
-    color: #06010c;
-
+    color: #e8ddea;
     font-size: 19px;
-
     line-height: 1.7;
-
     text-align: left;
 }
 
 .txt1 .conteudo::before {
-    content: " ";
-
+    content: "";
     color: #ff9fc8;
-
     font-size: 26px;
-
     font-weight: bold;
 }
 
 .txt2 .conteudo::before {
-    content: " ";
-
+    content: "";
     color: #d8b4ff;
-
     font-size: 26px;
-
     font-weight: bold;
 }
 
 .txt3 .conteudo::before {
-    content: " ";
-
+    content: "";
     color: #b8c8ff;
-
     font-size: 26px;
-
     font-weight: bold;
 }
 
 .foto {
-    max-width: 1100px;
-
+    max-width: 1150px;
     margin: 90px auto 0;
-
     display: grid;
-
     grid-template-columns: repeat(3, 1fr);
-
-    gap: 25px;
+    gap: 30px;
 }
 
 .foto1,
 .foto2,
 .foto3 {
-    height: 330px;
-
-    border-radius: 20px;
-
-    background-size: cover;
-    background-position: center;
-
+    height: 380px;
+    border-radius: 25px;
     border: 1px solid rgba(255, 255, 255, 0.12);
-
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
-
     transition: 0.6s;
-
     position: relative;
-
     overflow: hidden;
+    background: #15121d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.foto1 {
-    background-image: url("./foto1.jpg");
+.foto1 img,
+.foto2 img,
+.foto3 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: 0.6s;
 }
 
-.foto2 {
-    background-image: url("./foto2.jpg");
-}
-
-.foto3 {
-    background-image: url("./foto3.jpg");
+.foto1:hover img,
+.foto2:hover img,
+.foto3:hover img {
+    transform: scale(1.05);
 }
 
 .foto1::after,
 .foto2::after,
 .foto3::after {
     content: "❤️";
-
     position: absolute;
-
     bottom: 20px;
     right: 20px;
-
     font-size: 25px;
-
     opacity: 0;
-
     transform: translateY(20px);
-
     transition: 0.4s;
+    z-index: 2;
 }
 
 .foto1:hover,
 .foto2:hover,
 .foto3:hover {
     transform: translateY(-10px) scale(1.02);
-
     box-shadow:
         0 25px 50px rgba(0, 0, 0, 0.5),
         0 0 30px rgba(255, 100, 170, 0.12);
@@ -269,7 +209,6 @@ body {
 .foto2:hover::after,
 .foto3:hover::after {
     opacity: 1;
-
     transform: translateY(0);
 }
 
@@ -356,7 +295,7 @@ body {
         padding: 50px 20px;
     }
 
-    .container>h1 {
+    .container > h1 {
         font-size: 35px;
         margin-bottom: 45px;
     }
@@ -365,9 +304,7 @@ body {
     .txt2,
     .txt3 {
         flex-direction: column;
-
         text-align: center;
-
         padding: 30px 20px;
     }
 
@@ -376,24 +313,16 @@ body {
     .txt3 .conteudo {
         text-align: center;
     }
-
-    .foto {
-        grid-template-columns: 1fr;
-    }
-
-    .foto1,
-    .foto2,
-    .foto3 {
-        height: 400px;
-    }
 }
+
 @media (max-width: 700px) {
     .container {
         padding: 30px 15px;
     }
 
-    .container h1 {
+    .container > h1 {
         font-size: 30px;
+        margin-bottom: 35px;
     }
 
     .mensagens {
@@ -409,11 +338,48 @@ body {
         border-radius: 22px;
     }
 
+    .animation1,
+    .animation2,
+    .animation3 {
+        width: 130px;
+        height: 130px;
+    }
+
+    .animation1::after,
+    .animation2::after,
+    .animation3::after {
+        width: 100px;
+        height: 100px;
+    }
+
+    .animation1::before {
+        font-size: 60px;
+    }
+
+    .animation2::before {
+        font-size: 55px;
+    }
+
+    .animation3::before {
+        font-size: 60px;
+    }
+
+    .txt1 .conteudo,
+    .txt2 .conteudo,
+    .txt3 .conteudo {
+        min-height: 100px;
+        padding: 15px;
+        font-size: 16px;
+        line-height: 1.6;
+        text-align: center;
+    }
+
     .foto {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 8px;
         width: 100%;
+        margin-top: 50px;
     }
 
     .foto1,
@@ -421,11 +387,65 @@ body {
     .foto3 {
         width: 100%;
         height: 180px;
-        border-radius: 12px;
+        border-radius: 14px;
+    }
+
+    .foto1 img,
+    .foto2 img,
+    .foto3 img {
+        object-fit: cover;
+        object-position: center;
     }
 }
 
 @media (max-width: 430px) {
+    .container {
+        padding: 25px 10px;
+    }
+
+    .container > h1 {
+        font-size: 27px;
+    }
+
+    .txt1,
+    .txt2,
+    .txt3 {
+        padding: 20px 12px;
+    }
+
+    .animation1,
+    .animation2,
+    .animation3 {
+        width: 110px;
+        height: 110px;
+    }
+
+    .animation1::after,
+    .animation2::after,
+    .animation3::after {
+        width: 85px;
+        height: 85px;
+    }
+
+    .animation1::before {
+        font-size: 50px;
+    }
+
+    .animation2::before {
+        font-size: 45px;
+    }
+
+    .animation3::before {
+        font-size: 50px;
+    }
+
+    .txt1 .conteudo,
+    .txt2 .conteudo,
+    .txt3 .conteudo {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
     .foto {
         grid-template-columns: repeat(3, 1fr);
         gap: 5px;
@@ -434,7 +454,15 @@ body {
     .foto1,
     .foto2,
     .foto3 {
-        height: 140px;
+        height: 150px;
         border-radius: 10px;
+    }
+
+    .foto1::after,
+    .foto2::after,
+    .foto3::after {
+        font-size: 18px;
+        bottom: 8px;
+        right: 8px;
     }
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import './conteudo.css';
 
+
 function Conteudo() {
     return (
         <main className="container">
@@ -26,9 +27,9 @@ function Conteudo() {
                 </div>
             </section>
             <section className="foto">
-                <div className="foto1"><img src="" alt="" /></div>
-                <div className="foto2"><img src="" alt="" /></div>
-                <div className="foto3"><img src="" alt="" /></div>
+                <div className="foto1"><img src="src\IMG\IMG-20260929-WA0002.jpg" alt="" /></div>
+                <div className="foto2"><img src="src\IMG\file_00000000dcd4820e9339dad76581f006.png" alt="" /></div>
+                <div className="foto3"><img src="src\IMG\file_00000000d09c820eab49b1488c345787.png" alt="" /></div>
             </section>
         </main>
     );
