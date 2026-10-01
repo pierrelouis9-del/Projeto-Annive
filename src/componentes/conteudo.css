@@ -113,30 +113,60 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
-    color: #e8ddea;
+    padding: 28px 35px;
+    color: #f1e8f2;
     font-size: 19px;
-    line-height: 1.7;
+    line-height: 1.8;
     text-align: left;
+    background: rgba(255, 255, 255, 0.035);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    box-shadow:
+        inset 0 0 25px rgba(255, 255, 255, 0.02),
+        0 8px 25px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 2px 12px rgba(255, 170, 220, 0.18);
+    transition: 0.4s ease;
 }
 
-.txt1 .conteudo::before {
-    content: "";
-    color: #ff9fc8;
-    font-size: 26px;
-    font-weight: bold;
+.txt1 .conteudo:hover,
+.txt2 .conteudo:hover,
+.txt3 .conteudo:hover {
+    transform: translateY(-3px);
+    background: rgba(255, 255, 255, 0.055);
+    border-color: rgba(255, 130, 190, 0.2);
+    box-shadow:
+        inset 0 0 30px rgba(255, 130, 190, 0.04),
+        0 10px 30px rgba(0, 0, 0, 0.3),
+        0 0 25px rgba(255, 100, 180, 0.08);
+    text-shadow:
+        0 2px 15px rgba(255, 150, 210, 0.25);
 }
 
-.txt2 .conteudo::before {
-    content: "";
-    color: #d8b4ff;
-    font-size: 26px;
-    font-weight: bold;
+.txt1 .conteudo {
+    border-color: rgba(255, 120, 180, 0.12);
 }
 
+.txt2 .conteudo {
+    border-color: rgba(216, 180, 255, 0.12);
+}
+
+.txt3 .conteudo {
+    border-color: rgba(184, 200, 255, 0.12);
+}
+
+.txt1 .conteudo p,
+.txt2 .conteudo p,
+.txt3 .conteudo p {
+    max-width: 750px;
+    margin: 0;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+}
+
+.txt1 .conteudo::before,
+.txt2 .conteudo::before,
 .txt3 .conteudo::before {
     content: "";
-    color: #b8c8ff;
     font-size: 26px;
     font-weight: bold;
 }
@@ -312,6 +342,7 @@ body {
     .txt2 .conteudo,
     .txt3 .conteudo {
         text-align: center;
+        width: 100%;
     }
 }
 
@@ -368,10 +399,16 @@ body {
     .txt2 .conteudo,
     .txt3 .conteudo {
         min-height: 100px;
-        padding: 15px;
+        padding: 20px 18px;
         font-size: 16px;
-        line-height: 1.6;
+        line-height: 1.7;
         text-align: center;
+    }
+
+    .txt1 .conteudo p,
+    .txt2 .conteudo p,
+    .txt3 .conteudo p {
+        max-width: 100%;
     }
 
     .foto {
@@ -442,8 +479,9 @@ body {
     .txt1 .conteudo,
     .txt2 .conteudo,
     .txt3 .conteudo {
+        padding: 18px 15px;
         font-size: 15px;
-        line-height: 1.5;
+        line-height: 1.6;
     }
 
     .foto {
@@ -464,5 +502,91 @@ body {
         font-size: 18px;
         bottom: 8px;
         right: 8px;
+    }
+}
+.titre-final {
+    max-width: 900px;
+    margin: 100px auto 50px;
+    text-align: center;
+    font-size: clamp(25px, 4vw, 42px);
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 1.4;
+    color: #f7eaf4;
+    position: relative;
+    opacity: 0;
+    animation: aparecerTitulo 1.5s ease forwards;
+    text-shadow:
+        0 0 10px rgba(255, 110, 180, 0.15),
+        0 0 25px rgba(255, 110, 180, 0.1);
+}
+
+.titre-final::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    margin: 18px auto 0;
+    background: linear-gradient(90deg, transparent, #ff75ad, #c77dff, transparent);
+    box-shadow: 0 0 12px rgba(255, 100, 180, 0.6);
+    animation: ligneTitre 1.2s ease 1s forwards;
+}
+
+@keyframes aparecerTitulo {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+        filter: blur(8px);
+    }
+
+    60% {
+        opacity: 1;
+        filter: blur(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+@keyframes ligneTitre {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+
+    to {
+        width: 180px;
+        opacity: 1;
+    }
+}
+
+.titre-final:hover {
+    text-shadow:
+        0 0 10px rgba(255, 110, 180, 0.35),
+        0 0 25px rgba(255, 110, 180, 0.25),
+        0 0 45px rgba(199, 125, 255, 0.15);
+    transition: 0.5s ease;
+}
+
+@media (max-width: 700px) {
+    .titre-final {
+        margin: 70px auto 35px;
+        font-size: 28px;
+        padding: 0 15px;
+    }
+
+    .titre-final::after {
+        margin-top: 14px;
+    }
+}
+
+@media (max-width: 430px) {
+    .titre-final {
+        margin: 55px auto 30px;
+        font-size: 24px;
+        line-height: 1.5;
     }
 }
